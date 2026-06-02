@@ -1,0 +1,77 @@
+/* ============================
+   DEPOIMENTOS
+   ============================ */
+.depoimentos {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.depoimentos__slider {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  min-height: 160px;
+}
+
+.depoimento-card {
+  display: none;
+  animation: fadeIn 0.4s ease both;
+}
+.depoimento-card.active {
+  display: block;
+}
+
+.depoimento-card {
+  background: var(--bg-soft);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+
+.depoimento-quote {
+  color: var(--green);
+  margin-bottom: 12px;
+}
+
+.depoimento-text {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.depoimento-author strong {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 2px;
+}
+.depoimento-author span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  transition:
+    background var(--transition),
+    transform var(--transition);
+  padding: 0;
+}
+.dot.active {
+  background: var(--green);
+  transform: scale(1.2);
+}
+

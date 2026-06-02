@@ -1,0 +1,10 @@
+/* ============================
+   IMPORTS DOS MÓDULOS CSS
+   ============================ */
+@import "./global.css";
+@import "./navbar.css";
+@import "./hero.css";
+@import "./solutions.css";
+@import "./testimonials.css";
+@import "./faq.css";
+@import "./footer.css";
