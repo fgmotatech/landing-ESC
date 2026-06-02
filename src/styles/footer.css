@@ -5,15 +5,14 @@
   background: #0b1608;
   padding-top: 60px;
   color: rgba(255, 255, 255, 0.8);
-
 }
 
 .footer__inner {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 40px;
+  padding-bottom: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-
 }
 
 .footer__brand .navbar__logo .logo-text {
@@ -84,7 +83,7 @@
 }
 
 .footer__bottom {
-  padding: 30px;
+  padding: 10px;
 }
 .footer__bottom-inner {
   display: flex;
