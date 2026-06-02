@@ -14,29 +14,737 @@
       href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./src/styles/global.css" />
+    <link rel="stylesheet" href="./src/styles/styles.css" />
   </head>
   <body>
-    <!-- Container: Navbar -->
-    <div id="root-navbar"></div>
+    <header class="navbar" id="navbar">
+      <div class="container navbar__inner">
+        <a href="#" class="navbar__logo">
+          <div class="logo-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#fff"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="8" />
+              <path d="M12 8v4l3 3" />
+            </svg>
+          </div>
+          <span class="logo-text">CredFácil<sup>ESC</sup></span>
+        </a>
 
-    <!-- Container: Hero + Features Bar -->
-    <div id="root-hero"></div>
+        <nav class="navbar__menu" id="navMenu">
+          <a href="#solucoes" class="navbar__link">Soluções</a>
+          <a href="#avaliacoes" class="navbar__link">Avaliações</a>
+          <a href="#faq" class="navbar__link">Perguntas frequentes</a>
+          <a href="#contato" class="navbar__link">Contato</a>
+        </nav>
 
-    <!-- Container: Soluções -->
-    <div id="root-solutions"></div>
+        <a
+          href="https://wa.me/5511900001234"
+          class="btn btn--whatsapp btn--sm"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+            />
+          </svg>
+          Fale no WhatsApp
+        </a>
 
-    <!-- Container: Depoimentos -->
-    <div id="root-testimonials"></div>
+        <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
 
-    <!-- Container: FAQ + CTA Banner -->
-    <div id="root-faq"></div>
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            Crédito rápido e<br />inteligente para sua<br />
+            <span class="hero__title--green">empresa crescer.</span>
+          </h1>
+          <p class="hero__subtitle">
+            Soluções financeiras simples, seguras e sob medida para MEI, ME e
+            EPP impulsionarem seus negócios.
+          </p>
+          <div class="hero__actions">
+            <a href="#simule" class="btn btn--primary">
+              Simular crédito
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a
+              href="https://wa.me/5511900001234"
+              class="btn btn--outline-green"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                />
+              </svg>
+              Falar no WhatsApp
+            </a>
+          </div>
+        </div>
 
-    <!-- Container: Footer + WhatsApp Float -->
-    <div id="root-footer"></div>
+        <div class="hero__image-wrap">
+          <div class="hero__img-bg">
+            <img src="./src/img/imagem.png" alt="Empresário usando crédito" />
+          </div>
+        </div>
 
-    <script type="module" src="./src/js/main.js">
-   
+        <!-- SIMULADOR CARD -->
+        <div class="sim-card" id="simule">
+          <h3 class="sim-card__title">Simule seu crédito</h3>
+
+          <div class="sim-field">
+            <label class="sim-label">Valor desejado</label>
+            <div class="sim-value" id="simValue">R$ 50.000,00</div>
+            <input
+              type="range"
+              class="sim-range"
+              id="simRange"
+              min="5000"
+              max="200000"
+              step="1000"
+              value="50000"
+            />
+            <div class="sim-range-labels">
+              <span>R$ 5.000</span>
+              <span>R$ 200.000</span>
+            </div>
+          </div>
+
+          <div class="sim-row">
+            <div class="sim-field sim-field--half">
+              <label class="sim-label">Prazo</label>
+              <select class="sim-select" id="simPrazo">
+                <option value="6">6 meses</option>
+                <option value="12" selected>12 meses</option>
+                <option value="18">18 meses</option>
+                <option value="24">24 meses</option>
+                <option value="36">36 meses</option>
+              </select>
+            </div>
+            <div class="sim-field sim-field--half">
+              <label class="sim-label">Finalidade</label>
+              <select class="sim-select" id="simFinalidade">
+                <option value="giro" selected>Capital de giro</option>
+                <option value="equipamentos">Equipamentos</option>
+                <option value="recebiveis">Antecipação</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="sim-result">
+            <div>
+              <div class="sim-result__label">Parcela estimada</div>
+              <div class="sim-result__value" id="simParcela">R$ 4.527,18</div>
+            </div>
+            <div class="sim-result__note">
+              *Simulação sujeita à análise de crédito.
+            </div>
+          </div>
+
+          <button class="btn btn--primary btn--full">Simular agora</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES BAR -->
+    <section class="features-bar">
+      <div class="container features-bar__grid">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
+          </div>
+          <div>
+            <strong>Aprovação rápida</strong>
+            <p>Processo simples e descomplicado.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <div>
+            <strong>Taxas competitivas</strong>
+            <p>Condições justas para impulsionar seu negócio.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+          </div>
+          <div>
+            <strong>Segurança garantida</strong>
+            <p>Seus dados e informações sempre protegidos.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+          </div>
+          <div>
+            <strong>100% online</strong>
+            <p>Simule e contrate de onde estiver.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="solucoes" id="solucoes">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Nossas soluções</h2>
+          <p class="section-subtitle">
+            Crédito sob medida para cada momento do seu negócio.
+          </p>
+        </div>
+        <div class="solucoes__grid">
+          <div class="solucao-card">
+            <div class="solucao-icon">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 8v4l3 3" />
+                <path d="M8 12H4M20 12h-4M12 4V2M12 22v-2" />
+              </svg>
+            </div>
+            <h3 class="solucao-card__title">Antecipação de Recebíveis</h3>
+            <p class="solucao-card__desc">
+              Receba suas vendas no cartão ou boleto à vista e tenha mais fôlego
+              no caixa.
+            </p>
+          </div>
+          <div class="solucao-card solucao-card--featured">
+            <div class="solucao-icon">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                <polyline points="16 7 22 7 22 13" />
+              </svg>
+            </div>
+            <h3 class="solucao-card__title">Capital de Giro</h3>
+            <p class="solucao-card__desc">
+              Tenha recursos para comprar estoque, pagar fornecedores e crescer.
+            </p>
+          </div>
+          <div class="solucao-card">
+            <div class="solucao-icon">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 01-8 0" />
+              </svg>
+            </div>
+            <h3 class="solucao-card__title">Financiamento de Equipamentos</h3>
+            <p class="solucao-card__desc">
+              Invista em equipamentos e tecnologia para aumentar sua
+              produtividade.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="depoimentos" id="avaliacoes">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">O que nossos clientes dizem</h2>
+        </div>
+        <div class="depoimentos__slider" id="slider">
+          <div class="depoimento-card active">
+            <div class="depoimento-quote">
+              <svg
+                width="36"
+                height="36"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
+              </svg>
+            </div>
+            <p class="depoimento-text">
+              A CredFácil ESC foi essencial para o crescimento da nossa empresa.
+              Crédito rápido e atendimento excelente!
+            </p>
+            <div class="depoimento-author">
+              <strong>Juliana Silva</strong>
+              <span>Loja de Roupas</span>
+            </div>
+          </div>
+          <div class="depoimento-card">
+            <div class="depoimento-quote">
+              <svg
+                width="36"
+                height="36"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
+              </svg>
+            </div>
+            <p class="depoimento-text">
+              Consegui capital de giro de forma simples e rápida. Recomendo para
+              qualquer empresário!
+            </p>
+            <div class="depoimento-author">
+              <strong>Carlos Mendes</strong>
+              <span>Distribuidora</span>
+            </div>
+          </div>
+          <div class="depoimento-card">
+            <div class="depoimento-quote">
+              <svg
+                width="36"
+                height="36"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
+              </svg>
+            </div>
+            <p class="depoimento-text">
+              Processo totalmente online, sem burocracia. Em poucos dias o
+              dinheiro já estava na conta da minha empresa.
+            </p>
+            <div class="depoimento-author">
+              <strong>Marcos Oliveira</strong>
+              <span>Restaurante</span>
+            </div>
+          </div>
+        </div>
+        <div class="slider-dots" id="sliderDots">
+          <button class="dot active" data-index="0"></button>
+          <button class="dot" data-index="1"></button>
+          <button class="dot" data-index="2"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Perguntas frequentes</h2>
+        </div>
+        <div class="faq__list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Como funciona a análise de crédito?
+              <svg
+                class="faq-chevron"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Nossa análise é feita de forma simples e rápida. Você preenche o
+                formulário online com os dados da sua empresa, nossa equipe
+                realiza a análise em até 24 horas e você recebe a resposta por
+                e-mail ou WhatsApp.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Quais documentos são necessários?
+              <svg
+                class="faq-chevron"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Geralmente solicitamos: CNPJ ativo, documentos dos sócios (RG e
+                CPF), comprovante de endereço da empresa, extratos bancários dos
+                últimos 3 meses e faturamento dos últimos 12 meses.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Em quanto tempo recebo o crédito?
+              <svg
+                class="faq-chevron"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Após a aprovação e assinatura do contrato, o valor é liberado em
+                até 1 dia útil diretamente na conta bancária da sua empresa.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Quais empresas podem solicitar?
+              <svg
+                class="faq-chevron"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Atendemos MEI, Microempresas (ME) e Empresas de Pequeno Porte
+                (EPP) com CNPJ ativo há pelo menos 6 meses e faturamento
+                comprovável.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              As taxas são fixas ou variáveis?
+              <svg
+                class="faq-chevron"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Trabalhamos com taxas fixas, definidas no momento da
+                contratação. Você sabe exatamente o valor de cada parcela antes
+                de assinar o contrato, sem surpresas.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="faq__cta">
+          <a href="#contato" class="faq__link"
+            >Ver todas as perguntas
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+      <div class="container cta-banner__inner">
+        <div>
+          <h2 class="cta-banner__title">
+            Pronto para impulsionar seu negócio?
+          </h2>
+          <p class="cta-banner__sub">
+            Fale com um especialista e descubra a melhor solução para você.
+          </p>
+        </div>
+        <a
+          href="https://wa.me/5511900001234"
+          class="btn btn--whatsapp"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+            />
+          </svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer" id="contato">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <a href="#" class="navbar__logo">
+            <div class="logo-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#fff"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="8" />
+                <path d="M12 8v4l3 3" />
+              </svg>
+            </div>
+            <span class="logo-text">CredFácil<sup>ESC</sup></span>
+          </a>
+          <p>Soluções financeiras inteligentes para o seu negócio crescer.</p>
+        </div>
+
+        <div class="footer__nav">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#quem-somos">Quem somos</a></li>
+            <li><a href="#faq">Perguntas frequentes</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__contato">
+          <h4>Contato</h4>
+          <ul>
+            <li>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                />
+              </svg>
+              (11) 90000-1234
+            </li>
+            <li>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              contato@credfacilesc.com.br
+            </li>
+            <li>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              São Paulo – SP
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__social">
+          <h4>Siga-nos</h4>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"
+                />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="container footer__bottom-inner">
+          <span>© 2024 CredFácil ESC – Todos os direitos reservados.</span>
+          <span>Empresa Simples de Crédito registrada e autorizada.</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a
+      href="https://wa.me/5511900001234"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener"
+      aria-label="Falar no WhatsApp"
+    >
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+        />
+      </svg>
+    </a>
+
+    <script type="module">
+      import { iniciarNavbar } from "./src/js/navbar.js";
+      import { iniciarSimulador } from "./src/js/simulator.js";
+      import { iniciarFaq } from "./src/js/faq.js";
+      import { iniciarSlider } from "./src/js/slider.js";
+      import { iniciarAnimacoes } from "./src/js/animations.js";
+
+      iniciarNavbar();
+      iniciarSimulador();
+      iniciarFaq();
+      iniciarSlider();
+      iniciarAnimacoes();
     </script>
   </body>
 </html>
