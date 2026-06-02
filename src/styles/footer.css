@@ -5,6 +5,7 @@
   background: #0b1608;
   padding-top: 60px;
   color: rgba(255, 255, 255, 0.8);
+
 }
 
 .footer__inner {
@@ -12,6 +13,7 @@
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 40px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
 }
 
 .footer__brand .navbar__logo .logo-text {
@@ -93,7 +95,6 @@
   color: rgba(255, 255, 255, 0.3);
 }
 
-
 /* ============================
    WHATSAPP FLOAT
    ============================ */
@@ -118,7 +119,6 @@
   transform: scale(1.1);
   animation: none;
 }
-
 
 /* ============================
    FOOTER — RESPONSIVO

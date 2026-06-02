@@ -27,10 +27,7 @@
   box-shadow: var(--shadow);
   border-color: var(--green-light);
 }
-.solucao-card--featured {
-  border-color: var(--green);
-  box-shadow: var(--shadow);
-}
+
 
 .solucao-icon {
   width: 56px;

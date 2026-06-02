@@ -15,6 +15,7 @@
     box-shadow var(--transition),
     backdrop-filter var(--transition);
   backdrop-filter: blur(10px);
+
 }
 
 .navbar.scrolled {
@@ -25,6 +26,7 @@
 .navbar__inner {
   display: flex;
   align-items: center;
+
   gap: 32px;
   height: var(--nav-h);
 }
@@ -135,7 +137,9 @@
   :root {
     --nav-h: 64px;
   }
-
+  .navbar__inner {
+    width: 90%;
+  }
   .navbar__menu {
     position: fixed;
     top: var(--nav-h);
