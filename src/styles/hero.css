@@ -22,15 +22,9 @@
   pointer-events: none;
 }
 
-/*
-  Layout desktop:
-  | hero__content | hero__image-wrap | sim-card |
-
-  3 colunas explícitas para acomodar o sim-card na coluna 3.
-*/
 .hero__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr auto; /* FIX: 3ª coluna declarada para o sim-card */
+  grid-template-columns: 1fr 1fr auto;
   grid-template-rows: 1fr;
   gap: 20px;
   align-items: center;
@@ -78,7 +72,6 @@
   z-index: 2;
   pointer-events: none;
 
-  /* FIX: fallback transparente antes do valor complexo (compatibilidade Safari) */
   background: transparent;
   background:
     linear-gradient(
@@ -104,12 +97,11 @@
     180px 100%;
 }
 
-/* sim-card ocupa a coluna 3 explícita */
 .sim-card {
   grid-column: 3;
   grid-row: 1;
   position: relative;
-  /* FIX: removido "right: 0" duplicado — mantido apenas o valor intencional */
+
   right: 3rem;
 
   width: 310px;
@@ -151,15 +143,18 @@
 
 .hero__actions {
   display: flex;
+
   gap: 12px;
-  flex-wrap: wrap; /* FIX: movido para o container flex correto */
 }
-.hero__actions a {
-  flex: 1; /* FIX: botões lado a lado, dividindo o espaço igualmente */
+.btn--primary svg,
+.btn--outline-green svg {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* ============================
-   SIMULADOR CARD — campos internos
+   SIMULADOR CARD 
    ============================ */
 .sim-card__title {
   font-family: var(--font-head);
@@ -201,7 +196,6 @@
   );
   outline: none;
   cursor: pointer;
-  /* NOTA: garanta que o JS inicializa --pct no onload para evitar fallback hardcoded */
 }
 .sim-range::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -248,7 +242,7 @@
 
 .sim-select {
   width: 100%;
-  box-sizing: border-box; /* FIX: evita transbordamento com padding-right */
+  box-sizing: border-box;
   padding: 9px 12px;
   padding-right: 32px;
   border: 1.5px solid var(--border);
@@ -363,7 +357,6 @@
     top: 20px;
   }
 
-  /* FIX: reset de grid-column/row ao mudar para flex */
   .hero__content,
   .hero__image-wrap,
   .sim-card {
@@ -386,7 +379,7 @@
 
   .sim-card {
     position: static;
-    right: unset; /* FIX: limpa o right residual do desktop */
+    right: unset;
     transform: none;
     margin: 10px;
   }
