@@ -402,10 +402,7 @@
     align-items: center;
     text-align: center;
   }
-  .hero__actions{
-     display: flex;
-     flex-direction: column;
-  }
+
   .hero__actions a {
     flex: unset;
     width: 100%;
@@ -463,6 +460,10 @@
   .features-bar__grid {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+   .hero__actions{
+     display: flex;
+     flex-direction: column;
   }
   .sim-card {
     padding: 18px 16px;
