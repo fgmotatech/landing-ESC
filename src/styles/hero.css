@@ -402,6 +402,10 @@
     align-items: center;
     text-align: center;
   }
+  .hero__actions{
+     display: flex;
+     flex-direction: column;
+  }
   .hero__actions a {
     flex: unset;
     width: 100%;
